@@ -1,44 +1,20 @@
 import {useState,useEffect} from "react";
 import React from 'react'
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () =>{
-    const [blogs, setBlogs] = useState([
-      {
-        title: "My new blog",
-        body: "lorem ipsum dolor sit amet",
-        author: "Lavonne",
-        id: "1",
-      },
-      {
-        title: "New house plant!",
-        body: "lorem ipsum dolor sit amet",
-        author: "Mikel",
-        id: "2",
-      },
-      {
-        title: "Plant aftercare?",
-        body: "lorem ipsum dolor sit amet",
-        author: "Annamae",
-        id: "3",
-      }
-    ]);
-    const [name, setName] = useState("MAURICE");
+//data: xyz means we are giving it a name
+  const {data: blogs,isLoading,error} = useFetch( "http://localhost:3000/blogs");
 
-    const handleDelete = (id) =>{
-        const newBlogs = blogs.filter(blog => blog.id !== id );
-        setBlogs (newBlogs);
-
-    }
-    useEffect(()=> {
-        console.log("use effect just ran bruh")
-        
-    },[])
 
   return (
     <div className="home">
-      <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
-      <p>{name}</p>
+      {error && <div>{error}</div>}
+      {isLoading && <div>Loading...</div>}
+      {/* renders the blogs list once we have data, not rendering otherwise*/}
+      {blogs && <BlogList blogs={blogs} title="All Blogs!"/>}
+      
     </div>
   );
 

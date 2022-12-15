@@ -1,13 +1,54 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+.navbar{
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  max-width:37.5rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar h1{
+  color: #2b6e4a;
+}
+
+.navbar .links{
+  margin-left: auto;
+}
+
+.navbar a{
+  margin-left: 1rem;
+  text-decoration: none;
+  padding: 0.4rem;
+}
+
+.navbar a:hover{
+  color: #2b6e4a;
+}
+
+.content{
+  max-width: 37.5rem;
+  margin:2.5rem ;
+  padding: 1.25rem;
+}
+
+.blog-preview{
+  padding: 0.6rem 1rem;
+  margin: 1.2rem 0;
+  border-bottom:0.2rem solid #fafafa ;
+}
+
+.blog-preview:hover{
+  box-shadow: 0.035rem 0.036rem 0.090rem rgba(0, 0, 0, 0.4);
+}
+
+.blog-preview h2{
+  font-size: 1.25rem;
+  color: #2b6e4a;
+  margin-bottom: 0.5rem;
 }

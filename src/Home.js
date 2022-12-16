@@ -5,8 +5,7 @@ import useFetch from "./useFetch";
 
 const Home = () =>{
 //data: xyz means we are giving it a name
-  const {data: blogs,isLoading,error} = useFetch( "http://localhost:3000/blogs");
-
+  const {data: blogs,isLoading,error} = useFetch("http://localhost:8000/blogs");
 
   return (
     <div className="home">

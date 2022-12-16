@@ -33,7 +33,7 @@
 
 .content{
   max-width: 37.5rem;
-  margin:2.5rem ;
+  margin:2.5rem auto;
   padding: 1.25rem;
 }
 
@@ -51,4 +51,64 @@
   font-size: 1.25rem;
   color: #2b6e4a;
   margin-bottom: 0.5rem;
+}
+
+.blog-preview a{
+  text-decoration: none;
+}
+
+/*For blog details pages*/
+
+.blog-details h2{
+  font-size: 1.25rem;
+  color: #2b6e4a;
+  margin-bottom: 0.8rem;
+}
+
+.blog-details div{
+  margin: 1.25rem 0;
+}
+
+.blog-details button{
+  background: #2b6e4a;
+  color: #fff;
+  border: 0;
+  padding: 0.8rem;
+  border-radius: 0.8rem ;
+  cursor: pointer;
+}
+
+/*Create a new blog ->Form*/
+.create{
+  max-width: 25.5rem ;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label{
+  text-align: left;
+  display: block;
+}
+
+.create h2{
+  font-size: 1.25rem;
+  color: #2b6e4a;
+  margin-bottom: 1.80rem;
+}
+
+.create input, .create textarea, .create select{
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  margin: 0.7rem 0;
+  border:1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button{
+  background: #2b6e4a;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
 }

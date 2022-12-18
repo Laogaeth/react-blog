@@ -10,6 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        
         <Navbar />
         <div className="content">
           {/*Switch component only 1 route shows at one time */}
@@ -29,7 +30,9 @@ function App() {
               <NotFound />
             </Route>
           </Switch>
+          
         </div>
+        
       </div>
     </Router>
   );
